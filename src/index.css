@@ -1,0 +1,69 @@
+/* Este es un archivo CSS que define los estilos globales de la aplicación React. */
+:root {  /* Define las variables CSS globales */
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;  /* Define la fuente del sistema */
+  line-height: 1.5;  /* Define el interlineado */
+  font-weight: 400;  /* Define el peso de la fuente */
+
+  color-scheme: light dark;  /* Define el esquema de color */
+  color: rgba(255, 255, 255, 0.87);  /* Color del texto */
+  background-color: #242424;  /* Color de fondo */
+
+  font-synthesis: none;  /* Desactiva la síntesis de fuentes */
+  text-rendering: optimizeLegibility;  /* Mejora la legibilidad del texto */
+  -webkit-font-smoothing: antialiased;  /* Suaviza las fuentes en navegadores WebKit */
+  -moz-osx-font-smoothing: grayscale;  /* Suaviza las fuentes en navegadores Firefox */
+}
+
+a {  /* Estilos para los enlaces */
+  font-weight: 500;  /* Peso de la fuente para enlaces */
+  color: #646cff;  /* Color de los enlaces */
+  text-decoration: inherit;  /* Hereda la decoración del texto */
+}
+a:hover {  /* Estilos para los enlaces al pasar el cursor */
+  color: #535bf2;  /* Color de los enlaces al pasar el cursor */
+}
+
+body {  /* Estilos para el cuerpo del documento */
+  margin: 0;  /* Elimina el margen por defecto del cuerpo */
+  display: flex;  /* Utiliza flexbox para el diseño */
+  place-items: center;  /* Centra los elementos en el eje vertical y horizontal */
+  min-width: 320px;  /* Ancho mínimo del cuerpo */
+  min-height: 100vh;  /* Altura mínima del cuerpo */
+}
+
+h1 {  /* Estilos para los títulos h1 */ 
+  font-size: 3.2em;  /* Tamaño de fuente para el título */
+  line-height: 1.1;  /* Interlineado para el título */
+}
+
+button {  /* Estilos para los botones */
+  border-radius: 8px;  /* Bordes redondeados para los botones */
+  border: 1px solid transparent;  /* Borde transparente por defecto */
+  padding: 0.6em 1.2em;  /* Espaciado interno del botón */
+  font-size: 1em;  /* Tamaño de fuente del botón */
+  font-weight: 500;  /* Peso de la fuente del botón */
+  font-family: inherit;  /* Hereda la fuente del elemento padre */
+  background-color: #1a1a1a;  /* Color de fondo del botón */
+  cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+  transition: border-color 0.25s;  /* Transición suave para el cambio de color del borde */
+}
+button:hover {  /* Estilos para los botones al pasar el cursor */
+  border-color: #646cff;  /* Cambia el color del borde al pasar el cursor */
+}
+button:focus,  /* Estilos para los botones al recibir foco */
+button:focus-visible {  /* Estilos para los botones al recibir foco visible */
+  outline: 4px auto -webkit-focus-ring-color;  /* Resalta el botón al recibir foco */
+}
+
+@media (prefers-color-scheme: light) {  /* Estilos para el esquema de color claro */
+  :root {  /* Variables para el esquema de color claro */
+    color: #213547;  /* Color del texto en modo claro */
+    background-color: #ffffff;  /* Color de fondo en modo claro */
+  }
+  a:hover {  /* Color de los enlaces al pasar el cursor en modo claro */
+    color: #747bff;  /* Color de los enlaces al pasar el cursor */
+  }
+  button {  /* Estilos para los botones en modo claro */
+    background-color: #f9f9f9;  /* Color de fondo del botón en modo claro */
+  }
+}
