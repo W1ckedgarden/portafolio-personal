@@ -1,205 +1,187 @@
 /* ===== ESTILOS DE INTERESTS LIST ===== */
 
 /* --- PANEL DE FAVORITOS --- */
-.favoritos-panel {  /* Selecciona el panel de favoritos */
-  background: var(--bg-main);  /* Color de fondo suave para el panel de favoritos */
-  border: var(--border-width) solid #e0e0e0;  /* Borde del panel de favoritos */
-  border-radius: var(--border-radius);  /* Bordes redondeados del panel de favoritos */
-  margin: var(--spacing-xl) auto var(--spacing-lg) auto;  /* Centra el panel horizontalmente y agrega margen superior e inferior */
-  padding: var(--spacing-md) var(--spacing-lg);  /* Espaciado interno del panel de favoritos */
-  max-width: 400px;  /* Ancho máximo del panel de favoritos */
-  box-shadow: var(--shadow-sm);  /* Sombra sutil para darle profundidad al panel de favoritos */
+.favoritos-panel {  /* Panel contenedor de la lista de favoritos */
+  background: var(--bg-main);  /* Fondo principal del panel */
+  border: var(--border-width) solid #e0e0e0;  /* Borde del panel */
+  border-radius: var(--border-radius);  /* Bordes redondeados */
+  margin: var(--spacing-xl) auto var(--spacing-lg) auto;  /* Margen superior e inferior */
+  padding: var(--spacing-md) var(--spacing-lg);  /* Espaciado interno */
+  max-width: 400px;  /* Ancho máximo del panel */
+  box-shadow: var(--shadow-sm);  /* Sombra sutil para dar profundidad */
 }
 
-.favoritos-panel h3 {  /* Selecciona el título del panel de favoritos */
-  margin-top: 0;  /* Elimina el margen superior del título */
-  color: var(--color-primary);  /* Color del texto del título */
-  font-size: var(--font-size-large);  /* Tamaño de fuente del título */
-  letter-spacing: 1px;  /* Espaciado entre letras del título */
-  text-align: center;  /* Centra el título del panel de favoritos */
-  margin-bottom: var(--spacing-md);  /* Margen inferior del título */
+.favoritos-panel h3 {  /* Título del panel */
+  margin-top: 0;  /* Sin margen superior */
+  color: var(--color-primary);  /* Color del texto */
+  font-size: var(--font-size-large);  /* Tamaño de fuente grande */
+  letter-spacing: 1px;  /* Espaciado entre letras */
+  text-align: center;  /* Alineación centrada */
+  margin-bottom: var(--spacing-md);  /* Margen inferior */
 }
 
 /* --- LISTA DE ELEMENTOS --- */
-#favoritos-lista {  /* Selecciona la lista de elementos de favoritos */
-  list-style: none;  /* Elimina los puntos de la lista */
-  padding: 0;  /* Elimina el padding de la lista */
-  margin: 0;  /* Elimina el margen de la lista */
+#favoritos-lista {  /* Lista de elementos de interés */
+  list-style: none;  /* Sin viñetas */
+  padding: 0;  /* Sin padding */
+  margin: 0;  /* Sin margen */
 }
-
-#favoritos-lista li {  /* Selecciona cada elemento de la lista de favoritos */
-  background: var(--bg-white);  /* Color de fondo de los elementos de la lista */
-  border: var(--border-width) solid var(--color-primary);  /* Borde de los elementos de la lista */
-  color: var(--color-primary);  /* Color del texto de los elementos de la lista */
-  border-radius: var(--border-radius-sm);  /* Bordes redondeados de los elementos de la lista */
-  padding: var(--spacing-xs) var(--spacing-sm);  /* Espaciado interno de los elementos de la lista */
-  margin-bottom: var(--spacing-xs);  /* Margen inferior para separar los elementos de la lista */
-  font-size: var(--font-size-base);  /* Tamaño de fuente de los elementos de la lista */
-  transition: background var(--transition-fast), color var(--transition-fast);  /* Transición suave para el cambio de fondo y color al pasar el mouse */
-  cursor: pointer;  /* Cursor pointer para indicar interactividad */
-}
-
-#favoritos-lista li:hover {  /* Efecto al pasar el mouse sobre los elementos de la lista */
-  background: var(--color-primary);  /* Color de fondo al pasar el mouse */
-  color: var(--text-white);  /* Color del texto al pasar el mouse */
-  transform: translateY(-1px);  /* Efecto de elevación sutil */
-  box-shadow: var(--shadow-sm);  /* Sombra al hacer hover */
-}
-
-/* --- ALERTA FAVORITOS --- */
-#alerta-favoritos {  /* Selecciona la alerta de favoritos */
-  display: none;  /* Oculta la alerta por defecto */
-  position: fixed;  /* Posiciona la alerta de forma fija en la pantalla */
-  top: var(--spacing-xl);  /* Posición desde la parte superior de la pantalla */
-  right: var(--spacing-xl);  /* Posición desde el lado derecho de la pantalla */
-  z-index: 9999;  /* Asegura que la alerta esté por encima de otros elementos */
-  min-width: 220px;  /* Ancho mínimo de la alerta */
-  text-align: center;  /* Alinea el texto al centro */
-  pointer-events: none;  /* Evita que la alerta interfiera con otros elementos interactivos */
-}
-
-.alerta-favoritos-activa {  /* Clase para activar la alerta */
-  display: block !important;  /* Muestra la alerta cuando está activa */
-  background: #e75480;  /* Color de fondo de la alerta */
-  color: #fffbe7;  /* Color del texto de la alerta */
-  padding: var(--spacing-sm) var(--spacing-lg);  /* Espaciado interno de la alerta */
-  border-radius: var(--border-radius);  /* Bordes redondeados de la alerta */
-  box-shadow: var(--shadow-md);  /* Sombra sutil para darle profundidad a la alerta */
-  font-weight: bold;  /* Negrita para el texto de la alerta */
-  animation: fadeAlerta 1.8s ease-out;  /* Animación de desvanecimiento para la alerta */
-}
-
-@keyframes fadeAlerta {  /* Animación de desvanecimiento para la alerta */
-  0% {   /* Inicio de la animación */
-    opacity: 0;  /* Comienza invisible */
-    transform: translateY(-20px) scale(0.9);  /* Comienza desplazada hacia arriba y reducida */
-  }
-  10% {  /* Primer paso de la animación */
-    opacity: 1;  /* Se vuelve visible */
-    transform: translateY(0) scale(1);  /* Se posiciona en su lugar y escala a tamaño normal */
-  }
-  90% {  /* Último paso de la animación */
-    opacity: 1;  /* Se mantiene visible */
-  }
-  100% {  /* Fin de la animación */
-    opacity: 0;  /* Se desvanece al final */
-    transform: translateY(-20px) scale(0.9);  /* Se desplaza hacia arriba y se reduce al final */
-  }
-}
-
-/* --- RESPONSIVE PARA TABLETS --- */
-@media (max-width: 768px) {  /* Estilos para tablets */
-  .favoritos-panel {  /* Panel de favoritos */
-    margin: var(--spacing-lg) var(--spacing-md);  /* Margen del panel de favoritos */
-    max-width: none;  /* Elimina el ancho máximo del panel de favoritos */
-  }
-  
-  #alerta-favoritos {  /* Alerta de favoritos */
-    top: var(--spacing-lg);  /* Posición desde la parte superior */
-    right: var(--spacing-lg);  /* Posición desde el lado derecho */
-    left: var(--spacing-lg);  /* Posición desde el lado izquierdo */
-    min-width: auto;  /* Elimina el ancho mínimo de la alerta */
-  }
-}
-
-/* --- RESPONSIVE PARA MÓVILES --- */
-@media (max-width: 480px) {  /* Estilos para móviles */
-  .favoritos-panel {  /* Panel de favoritos */
-    margin: var(--spacing-md) var(--spacing-sm);  /* Margen del panel de favoritos */
-    padding: var(--spacing-sm);  /* Espaciado interno del panel de favoritos */
-  }
-  
-  .favoritos-panel h3 {  /* Título del panel de favoritos */
-    font-size: var(--font-size-base);  /* Tamaño de fuente del título */
-  }
-  
-  #favoritos-lista li {  /* Elementos de la lista de favoritos */
-    padding: var(--spacing-xs);  /* Espaciado interno de los elementos de la lista */
-    font-size: var(--font-size-small);  /* Tamaño de fuente de los elementos de la lista */
-  }
-}
-
-/* --- NUEVOS ESTILOS PARA MEJORAS --- */
 
 /* Estado vacío */
-.lista-vacia {  /* Selecciona el estado vacío de la lista */
-  background: var(--bg-light);  /* Color de fondo claro para el estado vacío */
-  border: 2px dashed #e0e0e0;  /* Borde punteado para indicar que está vacío */
-  border-radius: var(--border-radius-sm);  /* Bordes redondeados para el estado vacío */
-  padding: var(--spacing-md);  /* Espaciado interno del estado vacío */
-  text-align: center;  /* Centra el texto del estado vacío */
-  color: var(--text-medium);  /* Color del texto del estado vacío */
-  font-size: var(--font-size-small);  /* Tamaño de fuente del estado vacío */
-  font-style: italic;  /* Estilo de fuente itálica para el estado vacío */
+.lista-vacia {  /* Estilo para cuando la lista está vacía */
+  background: var(--bg-light);  /* Fondo claro */
+  border: 2px dashed var(--border-dashed-color);  /* Borde punteado */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  padding: var(--spacing-md);  /* Espaciado interno */
+  text-align: center;  /* Alineación centrada */
+  color: var(--text-medium);  /* Color del texto */
+  font-size: var(--font-size-small);  /* Tamaño de fuente pequeño */
+  font-style: italic;  /* Cursiva */
 }
 
-/* Items de interés mejorados */
-.interes-item {  /* Selecciona cada item de interés */
-  background: var(--bg-white);  /* Color de fondo blanco para los items de interés */
-  border: var(--border-width) solid var(--color-primary);  /* Borde del item de interés */
-  border-radius: var(--border-radius-sm);  /* Bordes redondeados del item de interés */
-  padding: var(--spacing-sm);  /* Espaciado interno del item de interés */
-  margin-bottom: var(--spacing-xs);  /* Margen inferior para separar los items de interés */
-  display: flex;  /* Utiliza flexbox para alinear los items */
-  justify-content: space-between;  /* Espacio entre el contenido y el botón de eliminar */
-  align-items: center;  /* Alinea verticalmente el contenido */
-  transition: all var(--transition-fast);  /* Transición suave para todos los cambios */
-  cursor: default;  /* Cursor por defecto para indicar que no es interactivo */
+/* Items de interés con iconos */
+.interes-item {  /* Estilo de cada item de interés */
+  background: var(--bg-white);  /* Fondo blanco */
+  border: var(--border-width) solid var(--color-primary);  /* Borde del color primario */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  padding: var(--spacing-sm);  /* Espaciado interno */
+  margin-bottom: var(--spacing-xs);  /* Margen inferior */
+  display: flex;  /* Flexbox para disposición */
+  justify-content: space-between;  /* Espacio entre elementos */
+  align-items: center;  /* Alineación vertical centrada */
+  transition: all var(--transition-fast);  /* Transición suave para hover */
+  cursor: default;  /* Cursor por defecto */
 }
 
-.interes-item:hover {  /* Efecto al pasar el mouse sobre los items de interés */
-  background: rgba(199, 67, 109, 0.05);  /* Color de fondo al pasar el mouse */
-  transform: translateY(-1px);  /* Efecto de elevación sutil al pasar el mouse */
-  box-shadow: var(--shadow-sm);  /* Sombra al hacer hover */
+.interes-item:hover {  /* Efecto hover sobre el item */
+  background: var(--color-primary-light-bg);  /* Fondo claro al pasar el mouse */
+  transform: translateY(-1px);  /* Desplazamiento sutil hacia arriba */
+  box-shadow: var(--shadow-sm);  /* Sombra sutil al pasar el mouse */
 }
 
 .interes-contenido {  /* Contenido del item de interés */
-  display: flex;  /* Utiliza flexbox para alinear el contenido */
-  align-items: center;  /* Alinea verticalmente el contenido */
-  gap: var(--spacing-xs);  /* Espacio entre el icono y el texto */
-  flex: 1;  /* Permite que el contenido ocupe todo el espacio disponible */
+  display: flex;  /* Flexbox para disposición */
+  align-items: center;  /* Alineación vertical centrada */
+  gap: var(--spacing-xs);  /* Espacio entre icono y texto */
+  flex: 1;  /* Ocupa el espacio restante */
 }
 
 .interes-icono {  /* Icono del item de interés */
-  font-size: var(--font-size-large);  /* Tamaño del icono */
-  display: flex;  /* Utiliza flexbox para centrar el icono */
-  align-items: center;  /* Alinea verticalmente el icono */
-  justify-content: center;  /* Centra el icono horizontalmente */
+  font-size: var(--font-size-large);  /* Tamaño de fuente grande */
+  display: flex;  /* Flexbox para centrar el icono */
+  align-items: center;  /* Alineación vertical centrada */
+  justify-content: center;  /* Alineación horizontal centrada */
   width: 24px;  /* Ancho del icono */
   height: 24px;  /* Alto del icono */
 }
 
 .interes-texto {  /* Texto del item de interés */
-  font-size: var(--font-size-base);  /* Tamaño de fuente del texto */
+  font-size: var(--font-size-base);  /* Tamaño de fuente base */
   color: var(--color-primary);  /* Color del texto */
-  font-weight: 500;  /* Peso de fuente medio para el texto */
+  font-weight: 500;  /* Peso de fuente medio */
 }
 
 /* --- BOTÓN ELIMINAR --- */
 .btn-eliminar {  /* Botón para eliminar un item de interés */
-  background: none;  /* Sin fondo para el botón de eliminar */
-  border: none;  /* Sin borde para el botón de eliminar */
-  color: var(--text-medium);  /* Color del texto del botón de eliminar */
-  font-size: var(--font-size-base);  /* Tamaño de fuente del botón de eliminar */
-  width: 24px;  /* Ancho del botón de eliminar */
-  height: 24px;  /* Alto del botón de eliminar */
-  border-radius: 50%;  /* Bordes redondeados para el botón de eliminar */
-  display: flex;  /* Utiliza flexbox para centrar el contenido del botón */
-  align-items: center;  /* Alinea verticalmente el contenido del botón */
-  justify-content: center;  /* Centra el contenido del botón */
-  cursor: pointer;  /* Cursor pointer para indicar interactividad */
-  transition: all var(--transition-fast);  /* Transición suave para todos los cambios */
-  opacity: 0.6;  /* Opacidad reducida para el botón de eliminar */
+  background: none;  /* Sin fondo */
+  border: none;  /* Sin borde */
+  color: var(--text-medium);  /* Color del texto */
+  font-size: var(--font-size-base);  /* Tamaño de fuente base */
+  width: 24px;  /* Ancho del botón */
+  height: 24px;  /* Alto del botón */
+  border-radius: 50%;  /* Bordes redondeados */
+  display: flex;  /* Flexbox para centrar el contenido */
+  align-items: center;  /* Alineación vertical centrada */
+  justify-content: center;  /* Alineación horizontal centrada */
+  cursor: pointer;  /* Cursor de puntero */
+  transition: all var(--transition-fast);  /* Transición suave */
+  opacity: 0.6;  /* Opacidad inicial */
 }
 
-.btn-eliminar:hover {  /* Efecto al pasar el mouse sobre el botón de eliminar */
-  background: var(--color-error-hover);  /* Color de fondo al pasar el mouse */
+.btn-eliminar:hover {  /* Efecto hover sobre el botón */
+  background: var(--color-error-hover);  /* Fondo al pasar el mouse */
   color: var(--text-white);  /* Color del texto al pasar el mouse */
   opacity: 1;  /* Opacidad completa al pasar el mouse */
-  transform: scale(1.1);  /* Efecto de aumento al pasar el mouse */
+  transform: scale(1.1);  /* Escala al pasar el mouse */
 }
 
-.btn-eliminar:active {  /* Efecto al hacer clic en el botón de eliminar */
-  transform: scale(0.95);  /* Efecto de reducción al hacer clic */
-  transition: all var(--transition-instant);  /* Transición instantánea al hacer clic */
+.btn-eliminar:active {  /* Efecto al hacer clic en el botón */
+  transform: scale(0.95);  /* Escala hacia abajo al hacer clic */
+  transition: all var(--transition-instant);  /* Transición instantánea */
+}
+
+/* --- ALERTA FAVORITOS --- */
+#alerta-favoritos {  /* Alerta que se muestra al agregar un favorito */
+  display: none;  /* Oculta por defecto */
+  position: fixed;  /* Posición fija en la pantalla */
+  top: var(--spacing-xl);  /* Espacio desde la parte superior */
+  right: var(--spacing-xl);  /* Espacio desde la derecha */
+  z-index: 9999;  /* Z-index alto para que esté por encima de otros elementos */
+  min-width: 220px;  /* Ancho mínimo de la alerta */
+  text-align: center;  /* Alineación centrada del texto */
+  pointer-events: none;  /* No interactuable */
+}
+
+.alerta-favoritos-activa {  /* Clase para activar la alerta */
+  display: block !important;  /* Muestra la alerta */
+  background: #e75480;  /* Fondo de la alerta */
+  color: #fffbe7;  /* Color del texto de la alerta */
+  padding: var(--spacing-sm) var(--spacing-lg);  /* Espaciado interno */
+  border-radius: var(--border-radius);  /* Bordes redondeados */
+  box-shadow: var(--shadow-md);  /* Sombra para dar profundidad */
+  font-weight: bold;  /* Negrita para el texto */
+  animation: fadeAlerta 1.8s ease-out;  /* Animación de desvanecimiento */
+}
+
+@keyframes fadeAlerta {  /* Animación para la alerta */
+  0% {  /* Inicio de la animación */
+    opacity: 0;  /* Opacidad inicial */
+    transform: translateY(-20px) scale(0.9);  /* Desplazamiento hacia arriba y escala */
+  }
+  10% {  /* Primer paso de la animación */
+    opacity: 1;  /* Opacidad completa */
+    transform: translateY(0) scale(1);  /* Sin desplazamiento ni escala */
+  }
+  90% {  /* Último paso de la animación */
+    opacity: 1;  /* Mantiene opacidad completa */
+  }
+  100% {  /* Fin de la animación */
+    opacity: 0;  /* Opacidad final */
+    transform: translateY(-20px) scale(0.9);  /* Desplazamiento hacia arriba y escala */
+  }
+}
+
+/* --- RESPONSIVE PARA TABLETS --- */
+@media (max-width: 768px) {  /* Estilos para tablets */
+  .favoritos-panel {  /* Panel de favoritos en tablets */
+    margin: var(--spacing-lg) var(--spacing-md);  /* Margen reducido */
+    max-width: none;  /* Sin ancho máximo */
+  }
+  
+  #alerta-favoritos {  /* Alerta de favoritos en tablets */
+    top: var(--spacing-lg);  /* Espacio desde la parte superior */
+    right: var(--spacing-lg);  /* Espacio desde la derecha */
+    left: var(--spacing-lg);  /* Espacio desde la izquierda */
+    min-width: auto;  /* Ancho automático */
+  }
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 480px) {  /* Estilos para móviles */
+  .favoritos-panel {  /* Panel de favoritos en móviles */
+    margin: var(--spacing-md) var(--spacing-sm);  /* Margen reducido */
+    padding: var(--spacing-sm);  /* Espaciado interno reducido */
+  }
+  
+  .favoritos-panel h3 {  /* Título del panel en móviles */
+    font-size: var(--font-size-base);  /* Tamaño de fuente base */
+  }
+  
+  .interes-item {  /* Items de interés en móviles */
+    padding: var(--spacing-xs) var(--spacing-sm);  /* Espaciado interno reducido */
+  }
+  
+  .interes-texto {  /* Texto del item de interés en móviles */
+    font-size: var(--font-size-small);  /* Tamaño de fuente pequeño */
+  }
 }
