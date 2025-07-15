@@ -1,0 +1,79 @@
+/* ===== LAYOUT GENERAL DE LA APLICACIÓN ===== */
+
+/* Contenedor principal */
+#root {  /* Selecciona el contenedor raíz */
+  min-height: 100vh;  /* Altura mínima del 100% de la ventana */
+  display: flex;  /* Utiliza flexbox para el diseño */
+  flex-direction: column;  /* Dirección de los elementos en columna */
+}
+
+/* Elemento main */
+main {  /* Selecciona el elemento main */
+  flex: 1;  /* Ocupa el espacio restante disponible */
+  padding: var(--spacing-lg);  /* Espaciado interno */
+  max-width: 1200px;  /* Ancho máximo del contenedor */
+  margin: 0 auto;  /* Centra el contenedor horizontalmente */
+  width: 100%;  /* Ancho del 100% */
+}
+
+/* Header layout */
+header {  /* Selecciona el encabezado */
+  position: sticky;  /* Fija el encabezado en la parte superior al hacer scroll */
+  top: 0;  /* Posición en la parte superior */
+  z-index: 100;  /* Asegura que el encabezado esté por encima de otros elementos */
+  background: var(--bg-white);  /* Color de fondo blanco */
+  box-shadow: var(--shadow-sm);  /* Sombra para dar profundidad */
+}
+
+/* Footer layout */
+footer {  /* Selecciona el pie de página */
+  margin-top: auto;  /* Empuja el pie de página al final del contenedor */
+  background: var(--bg-light);  /* Color de fondo claro */
+  padding: var(--spacing-lg);  /* Espaciado interno */
+}
+
+/* Contenedor de secciones */
+.contenido {  /* Selecciona el contenedor de secciones */
+  display: flex;  /* Utiliza flexbox para el diseño */
+  flex-direction: column;  /* Dirección de los elementos en columna */
+  gap: var(--spacing-xl);  /* Espacio entre secciones */
+}
+
+/* Artículos/secciones individuales */
+article {  /* Selecciona los artículos o secciones */
+  background: var(--bg-white);  /* Color de fondo blanco */
+  padding: var(--spacing-lg);  /* Espaciado interno */
+  border-radius: var(--border-radius);  /* Bordes redondeados */
+  box-shadow: var(--shadow-sm);  /* Sombra para dar profundidad */
+  border: var(--border-width) solid #e0e0e0;  /* Borde gris claro */
+}
+
+/* Responsive para tablets */
+@media (max-width: 768px) {  /* Media query para tablets */
+  main {  /* Selecciona el elemento main */
+    padding: var(--spacing-md);  /* Espaciado interno reducido */
+  }
+  
+  article {  /* Selecciona los artículos */
+    padding: var(--spacing-md);  /* Espaciado interno reducido */
+  }
+  
+  .contenido {  /* Selecciona el contenedor de secciones */
+    gap: var(--spacing-lg);  /* Espacio entre secciones reducido */
+  }
+}
+
+/* Responsive para móviles */
+@media (max-width: 480px) {  /* Media query para móviles */
+  main {  /* Selecciona el elemento main */
+    padding: var(--spacing-sm);  /* Espaciado interno aún más reducido */
+  }
+  
+  article {  /* Selecciona los artículos */
+    padding: var(--spacing-sm);  /* Espaciado interno aún más reducido */
+  }
+  
+  .contenido {  /* Selecciona el contenedor de secciones */
+    gap: var(--spacing-md);  /* Espacio entre secciones aún más reducido */
+  }
+}

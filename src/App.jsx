@@ -1,11 +1,14 @@
 import { useRef } from 'react'  // Importa React y hooks necesarios
-import './App.css'  // Importa los estilos globales de la aplicación
-import Header from './components/Header'  // Importa el componente Header
-import Banner from './components/Banner'  // Importa el componente Banner
-import ContentSections from './components/ContentSections'  // Importa el componente ContentSections
-import InterestsList from './components/InterestsList'  // Importa el componente InterestsList
-import ContactForm from './components/ContactForm'  // Importa el componente ContactForm
-import Footer from './components/Footer'  // Importa el componente Footer
+import './styles/variables.css'  // Importa las variables de estilo
+import './styles/globals.css'  // Importa los estilos globales de la aplicación
+import './styles/layout.css'  // Importa los estilos de diseño
+import './App.css'  // Importa los estilos específicos de la aplicación
+import Header from './components/01-Header'  // Importa el componente Header
+import Banner from './components/02-Banner'  // Importa el componente Banner
+import ContentSections from './components/03-ContentSections'  // Importa el componente ContentSections
+import InterestsList from './components/04-InterestsList'  // Importa el componente InterestsList
+import ContactForm from './components/05-ContactForm'  // Importa el componente ContactForm
+import Footer from './components/06-Footer'  // Importa el componente Footer
 
 // Componente principal de la aplicación
 function App() {  // Define el componente App

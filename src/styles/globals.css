@@ -1,0 +1,84 @@
+/* ===== ESTILOS GLOBALES BASE ===== */
+
+/* Reset CSS básico */
+* {  /* Selecciona todos los elementos */
+  margin: 0;  /* Elimina el margen por defecto */
+  padding: 0;  /* Elimina el padding por defecto */
+  box-sizing: border-box;  /* Cambia el modelo de caja para incluir el padding y el borde en el ancho y alto total */
+}
+
+/* Estilos del body y html */
+html {  /* Selecciona el elemento html */
+  scroll-behavior: smooth; /* Navegación suave entre secciones */
+}
+
+body {  /* Selecciona el cuerpo del documento */
+  font-family: var(--font-family);  /* Fuente principal */
+  font-size: var(--font-size-base);  /* Tamaño de fuente base */
+  line-height: 1.6;  /* Interlineado para mejorar la legibilidad */
+  color: var(--text-dark);  /* Color del texto oscuro */
+  background-color: var(--bg-white);  /* Color de fondo blanco */
+}
+
+/* Estilos de enlaces globales */
+a {  /* Selecciona todos los enlaces */
+  color: var(--color-primary);  /* Color de los enlaces */
+  text-decoration: none;  /* Elimina la subrayado por defecto */
+  transition: var(--transition-fast);  /* Transición rápida para cambios de color */
+}
+
+a:hover {  /* Estilos para los enlaces al pasar el cursor */
+  color: var(--color-primary-dark);  /* Cambia el color al pasar el cursor */
+  text-decoration: underline;  /* Añade subrayado al pasar el cursor */
+}
+
+/* Estilos de títulos globales */
+h1, h2, h3, h4, h5, h6 {  /* Selecciona todos los títulos */
+  color: var(--text-dark);  /* Color del texto oscuro */
+  margin-bottom: var(--spacing-md);  /* Espaciado inferior */
+  font-weight: bold;  /* Peso de la fuente en negrita */
+}
+
+/* Estilos de párrafos */
+p {  /* Selecciona todos los párrafos */
+  margin-bottom: var(--spacing-md);  /* Espaciado inferior */
+  line-height: 1.6;  /* Interlineado para mejorar la legibilidad */
+}
+
+/* Estilos de listas */
+ul, ol {  /* Selecciona listas desordenadas y ordenadas */
+  margin-bottom: var(--spacing-md);  /* Espaciado inferior */
+}
+
+/* Estilos de imágenes */
+img {  /* Selecciona todas las imágenes */
+  max-width: 100%;  /* Ancho máximo del 100% para que no se desborden */
+  height: auto;  /* Altura automática para mantener la proporción */
+}
+
+/* Estilos de botones base */
+button {  /* Selecciona todos los botones */
+  cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+  border: none;  /* Elimina el borde por defecto */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  font-family: var(--font-family);  /* Fuente principal */
+  transition: var(--transition);  /* Transición suave para cambios de estilo */
+}
+
+button:hover {  /* Estilos para los botones al pasar el cursor */
+  transform: translateY(-1px);  /* Efecto de elevación al pasar el cursor */
+}
+
+/* Estilos de inputs base */
+input, textarea {  /* Selecciona todos los inputs y textareas */
+  font-family: var(--font-family);  /* Fuente principal */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  border: var(--border-width) solid #ddd;  /* Borde gris claro */
+  transition: var(--transition);  /* Transición suave para cambios de estilo */
+}
+
+input:focus, textarea:focus {  /* Estilos para inputs y textareas al recibir foco */
+  outline: none;  /* Elimina el contorno por defecto */
+  border-color: var(--color-primary);  /* Cambia el color del borde al recibir foco */
+  box-shadow: 0 0 0 2px rgba(199, 67, 109, 0.2);  /* Añade sombra al borde */
+}

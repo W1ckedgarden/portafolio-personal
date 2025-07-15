@@ -1,0 +1,168 @@
+/* ===== ESTILOS DEL HEADER ===== */
+
+/* --- HEADER: Contenedor principal del encabezado --- */
+header {  /* Selecciona el encabezado */
+  background-color: #ffe4ec;  /* Color de fondo claro */
+  color: var(--text-white);  /* Color del texto blanco */
+  padding: var(--spacing-sm) 0;  /* Espaciado interno */
+  text-align: center;  /* Alineación del texto al centro */
+  border: var(--border-width) solid #ccc;  /* Borde gris claro */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  position: sticky;  /* Fija el encabezado en la parte superior al hacer scroll */
+  top: 0;  /* Posición en la parte superior */
+  z-index: 100;  /* Asegura que el encabezado esté por encima de otros elementos */
+  box-shadow: var(--shadow-sm);  /* Sombra para dar profundidad */
+}
+
+/* --- LOGO: Imagen del perfil en el encabezado --- */
+.logo img {  /* Selecciona la imagen del logo */
+  width: 120px;  /* Ancho de la imagen */
+  height: 100px;  /* Altura de la imagen */
+  object-fit: cover;  /* Ajusta la imagen al contenedor */
+  object-position: 50% 30%;  /* Centra la imagen */
+  border-radius: 60%;  /* Bordes redondeados para un efecto circular */
+  border: var(--border-width) solid #ccc;  /* Borde gris claro */
+  max-width: 100px;  /* Ancho máximo de la imagen */
+  transition: var(--transition);  /* Transición suave para cambios de estilo */
+}
+
+.logo img:hover {  /* Efecto al pasar el cursor sobre la imagen */
+  transform: scale(1.05);  /* Escala la imagen al 105% */
+  box-shadow: var(--shadow-md);  /* Sombra más pronunciada al pasar el cursor */
+}
+
+/* --- NAVEGACIÓN: Barra de navegación principal --- */
+nav {  /* Selecciona la barra de navegación */
+  background-color: #ee2e68;  /* Color de fondo de la barra de navegación */
+  padding: var(--spacing-sm) 0;  /* Espaciado interno */
+  border-radius: 0 0 var(--border-radius-sm) var(--border-radius-sm);  /* Bordes redondeados en la parte inferior */
+  margin-top: var(--spacing-sm);  /* Margen superior para separar del logo */
+}
+
+nav ul {  /* Selecciona la lista de navegación */
+  list-style: none;  /* Elimina los puntos de la lista */
+  margin: 0;  /* Elimina el margen por defecto */
+  padding: 0;  /* Elimina el padding por defecto */
+  text-align: center;  /* Alineación del texto al centro */
+  display: flex;  /* Utiliza flexbox para alinear los elementos */
+  justify-content: center;  /* Centra los elementos horizontalmente */
+  flex-wrap: wrap;  /* Permite que los elementos se ajusten en varias líneas si es necesario */
+  gap: var(--spacing-sm);  /* Espacio entre los elementos de la lista */
+}
+
+nav ul li {  /* Selecciona los elementos de la lista */
+  display: inline-block;  /* Muestra los elementos en línea */
+}
+
+nav ul li a {  /* Selecciona los enlaces de navegación */
+  color: #fffbe7;  /* Color del texto de los enlaces */
+  text-decoration: none;  /* Elimina el subrayado por defecto */
+  font-weight: bold;  /* Peso de la fuente en negrita */
+  font-size: var(--font-size-large);  /* Tamaño de fuente grande */
+  padding: var(--spacing-sm) var(--spacing-md);  /* Espaciado interno */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  transition: var(--transition);  /* Transición suave para cambios de estilo */
+  display: block;  /* Hace que el enlace ocupe todo el espacio del elemento */
+}
+
+nav ul li a:hover,  /* Efecto al pasar el cursor sobre los enlaces */
+nav ul li a:focus {  /* Efecto al enfocar los enlaces */
+  background: rgba(255, 255, 255, 0.2);  /* Fondo semi-transparente al pasar el cursor */
+  color: var(--text-white);  /* Cambia el color del texto al blanco */
+  transform: translateY(-2px);  /* Efecto de elevación al pasar el cursor */
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 768px) {  /* Media query para móviles */
+  header {  /* Ajusta el encabezado para móviles */
+    padding: var(--spacing-xs) 0;  /* Espaciado interno reducido */
+  }
+  
+  .logo img {  /* Ajusta el logo para móviles */
+    width: 80px;  /* Ancho reducido del logo */
+    height: 70px;  /* Altura reducida del logo */
+  }
+  
+  nav {  /* Ajusta la barra de navegación para móviles */
+    overflow-x: auto;  /* Permite el desplazamiento horizontal si es necesario */
+    padding: var(--spacing-sm) var(--spacing-xs);  /* Espaciado interno reducido */
+  }
+  
+  nav ul {  /* Ajusta la lista de navegación para móviles */
+    flex-direction: row;  /* Alinea los elementos en una fila */
+    justify-content: flex-start;  /* Alinea los elementos al inicio */
+    gap: var(--spacing-xs);  /* Espacio entre los elementos de la lista */
+    min-width: max-content;  /* Asegura que la lista ocupe el ancho mínimo necesario */
+    padding: 0 var(--spacing-sm);  /* Espaciado interno horizontal */
+  }
+  
+  nav ul li {  /* Ajusta los elementos de la lista para móviles */
+    flex-shrink: 0;  /* Evita que los elementos se reduzcan de tamaño */
+  }
+  
+  nav ul li a {  /* Ajusta los enlaces de navegación para móviles */
+    font-size: var(--font-size-base);  /* Tamaño de fuente base */
+    padding: var(--spacing-xs) var(--spacing-sm);  /* Espaciado interno reducido */
+    white-space: nowrap;  /* Evita que el texto se divida en varias líneas */
+    min-width: fit-content;  /* Asegura que el enlace ocupe el ancho mínimo necesario */
+  }
+
+/* --- SCROLL HORIZONTAL MEJORADO --- */
+  /* Scrollbar personalizada para navegación */
+  nav::-webkit-scrollbar {  /* Personaliza la barra de desplazamiento */
+    height: 4px;  /* Altura de la barra de desplazamiento */
+  }
+  
+  nav::-webkit-scrollbar-track {  /* Personaliza la pista de la barra de desplazamiento */
+    background: rgba(255, 255, 255, 0.1);  /* Fondo de la pista */
+    border-radius: 2px;  /* Bordes redondeados de la pista */
+  }
+  
+  nav::-webkit-scrollbar-thumb {  /* Personaliza el pulgar de la barra de desplazamiento */
+    background: rgba(255, 255, 255, 0.3);  /* Color del pulgar */
+    border-radius: 2px;  /* Bordes redondeados del pulgar */
+  }
+  
+  nav::-webkit-scrollbar-thumb:hover {  /* Efecto al pasar el cursor sobre el pulgar */
+    background: rgba(255, 255, 255, 0.5);  /* Color del pulgar al pasar el cursor */
+  }
+  
+  /* Indicador visual de scroll */
+  nav::after {  /* Añade un indicador visual de scroll */
+    content: "→";  /* Contenido del indicador */
+    position: absolute;  /* Posiciona el indicador */
+    right: var(--spacing-xs);  /* Alinea el indicador a la derecha */
+    top: 50%;  /* Centra el indicador verticalmente */
+    transform: translateY(-50%);  /* Ajusta la posición vertical */
+    color: rgba(255, 255, 255, 0.6);  /* Color del indicador */
+    font-size: var(--font-size-small);  /* Tamaño de fuente del indicador */
+    pointer-events: none;  /* Evita que el indicador interfiera con los clics */
+    animation: fadeInOut 2s infinite;  /* Animación de desvanecimiento */
+  }
+}
+
+@keyframes fadeInOut {  /* Animación de desvanecimiento */
+  0%, 100% { opacity: 0.3; }  /* Comienza y termina con baja opacidad */
+  50% { opacity: 0.8; }  /* Aumenta la opacidad al 80% en el medio de la animación */
+}
+
+@media (max-width: 480px) {  /* Media query para móviles pequeños */
+  .logo img {  /* Ajusta el logo para móviles pequeños */
+    width: 60px;  /* Ancho reducido del logo */
+    height: 50px;  /* Altura reducida del logo */
+  }
+  
+  nav {  /* Ajusta la barra de navegación para móviles pequeños */
+    padding: var(--spacing-xs);  /* Espaciado interno reducido */
+  }
+  
+  nav ul {  /* Ajusta la lista de navegación para móviles pequeños */
+    gap: var(--spacing-xs);  /* Espacio entre los elementos de la lista */
+    padding: 0 var(--spacing-xs);  /* Espaciado interno horizontal reducido */
+  }
+  
+  nav ul li a {  /* Ajusta los enlaces de navegación para móviles pequeños */
+    font-size: var(--font-size-small);  /* Tamaño de fuente pequeño */
+    padding: var(--spacing-xs);  /* Espaciado interno reducido */
+  }
+}

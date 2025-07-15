@@ -1,3 +1,4 @@
+import './ContactForm.css'  // Importa los estilos del formulario de contacto
 import { useState, useEffect } from 'react'  // Importa React y hooks necesarios
 
 // Componente de formulario de contacto
@@ -72,8 +73,8 @@ function ContactForm() {  // Función para crear el formulario de contacto
     if (errors.length > 0) {  // Si hay errores, los muestra
       setMessages(errors.map(error => ({ type: 'error', text: error })))  // Mapea los errores a un formato adecuado para mostrar
       setIsSuccess(false)  // Indica que el envío no fue exitoso
-    } else {  // Si no hay errores, muestra mensaje de éxito
-      setMessages([{ type: 'success', text: 'Formulario enviado correctamente!' }])  // Muestra mensaje de éxito
+    } else {  // Si no hay errores, muestra mensaje de éxito      
+      setMessages([{ type: 'exito', text: 'Formulario enviado correctamente!' }])  // Muestra mensaje de éxito
       setIsSuccess(true)  // Indica que el envío fue exitoso
       setFormData({ nombre: '', apellido: '', email: '', mensaje: '' })  // Limpia los campos del formulario
       setCharCount(0)  // Reinicia el contador de caracteres
@@ -81,7 +82,7 @@ function ContactForm() {  // Función para crear el formulario de contacto
   }
 
   return (  // Renderiza el formulario de contacto
-    <section className={`formulario-contacto ${isSuccess ? 'exito' : ''}`}>  {/* Clase para aplicar estilos según el estado de éxito */}
+    <section id='formularioContacto' className={`formulario-contacto ${isSuccess ? 'exito' : ''}`}>  {/* Clase para aplicar estilos según el estado de éxito */}
       <h2>Formulario de Contacto</h2>  {/* Título del formulario */}
       <form onSubmit={handleSubmit}>  {/* Maneja el envío del formulario */}
         <label htmlFor="nombre">Nombre:</label>  {/* Etiqueta para el campo nombre */}

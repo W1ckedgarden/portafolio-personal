@@ -1,0 +1,80 @@
+/* ===== ESTILOS DEL FOOTER ===== */
+
+/* --- FOOTER: Contenedor principal del pie de página --- */
+footer {  /* Selecciona el pie de página */
+  background: linear-gradient(90deg, #e75480 0%, var(--color-primary) 100%);  /* Degradado de color */
+  color: #fffbe7;  /* Color del texto */
+  text-align: center;  /* Alineación del texto al centro */
+  padding: var(--spacing-sm) 0;  /* Espaciado interno */
+  border: 3px solid #ffe4ec;  /* Borde de color claro */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+}
+
+/* --- REDES SOCIALES EN FOOTER --- */
+.redes-sociales {  /* Selecciona el contenedor de redes sociales */
+  width: 30px;  /* Ancho del contenedor */
+}
+
+.redes-sociales a {  /* Selecciona los enlaces de redes sociales */
+  display: inline-flex;  /* Utiliza flexbox para alinear los iconos */
+  align-items: center;  /* Alinea los iconos verticalmente */
+  margin: 0 var(--spacing-sm);  /* Margen horizontal */
+  color: inherit;  /* Hereda el color del contenedor */
+  text-decoration: none;  /* Elimina el subrayado por defecto */
+  font-weight: bold;  /* Peso de la fuente en negrita */
+  transition: var(--transition);  /* Transición suave para cambios de estilo */
+}
+
+.redes-sociales a:hover {  /* Estilos al pasar el cursor sobre los enlaces */
+  transform: translateY(-2px);  /* Efecto de elevación al pasar el cursor */
+  opacity: 0.8;  /* Opacidad al pasar el cursor */
+}
+
+.redes-sociales img {  /* Selecciona las imágenes de los iconos de redes sociales */
+  width: 30px;  /* Ancho de los iconos */
+  height: 30px;  /* Altura de los iconos */
+  margin-right: 6px;  /* Margen derecho para separar los iconos */
+}
+
+/* --- CRÉDITOS DE LAS IMÁGENES EN FOOTER --- */
+.creditos-imagenes {  /* Selecciona el contenedor de créditos de imágenes */
+  background-color: var(--bg-success);  /* Color de fondo para los créditos */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  border: 1.5px solid #fffbe7;  /* Borde de color claro */
+  font-size: var(--font-size-small);  /* Tamaño de fuente pequeño */
+  color: rgba(0, 0, 0, 0.616);  /* Color del texto con opacidad */
+  margin-top: var(--spacing-xl);  /* Margen superior */
+  padding: var(--spacing-md);  /* Espaciado interno */
+}
+
+.creditos-imagenes a {  /* Selecciona los enlaces dentro de los créditos de imágenes */
+  color: inherit;  /* Hereda el color del contenedor */
+  text-decoration: none;  /* Elimina el subrayado por defecto */
+  transition: var(--transition);  /* Transición suave para cambios de estilo */
+}
+
+.creditos-imagenes a:hover {  /* Estilos al pasar el cursor sobre los enlaces */
+  color: var(--color-primary);  /* Cambia el color al pasar el cursor */
+}
+
+/* --- COPYRIGHT EN FOOTER --- */
+footer .copyright {  /* Selecciona el texto de copyright */
+  background-color: var(--bg-success);  /* Color de fondo para el copyright */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  border: 1.5px solid #fffbe7;  /* Borde de color claro */
+  font-size: var(--font-size-small);  /* Tamaño de fuente pequeño */
+  color: rgba(0, 0, 0, 0.616);  /* Color del texto con opacidad */
+  margin-top: var(--spacing-md);  /* Margen superior */
+  padding: var(--spacing-md);  /* Espaciado interno */
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 768px) {  /* Media query para móviles */
+  footer {  /* Selecciona el pie de página */
+    padding: var(--spacing-sm);  /* Espaciado interno reducido */
+  }
+  
+  .redes-sociales a {  /* Selecciona los enlaces de redes sociales */
+    margin: var(--spacing-xs) var(--spacing-sm);  /* Margen reducido */
+  }
+}

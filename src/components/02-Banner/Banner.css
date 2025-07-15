@@ -1,0 +1,65 @@
+/* ===== ESTILOS DEL BANNER ===== */
+
+/* --- BANNER: Contenedor principal del banner de bienvenida --- */
+.banner {  /* Selecciona el contenedor del banner */
+  background: linear-gradient(90deg, #e75480 0%, var(--color-primary) 100%);  /* Degradado de color */
+  padding: var(--spacing-lg);  /* Espaciado interno */
+  text-align: center;  /* Alineación del texto al centro */
+  border: 2px solid #ffe4ec;  /* Borde del banner */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  margin-bottom: var(--spacing-lg);  /* Margen inferior */
+  box-shadow: var(--shadow-sm);  /* Sombra para dar profundidad */
+}
+
+/* --- TÍTULO DEL BANNER --- */
+.banner h1 {  /* Selecciona el título del banner */
+  font-style: italic;  /* Estilo de fuente en cursiva */
+  font-size: 2.5rem; /* Equivalente a xx-large pero más controlado */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);  /* Sombra del texto */
+  margin-bottom: var(--spacing-md);  /* Margen inferior */
+  font-weight: bold;  /* Negrita para el título */
+  color: #ffffff;  /* Color blanco puro para mejor contraste */
+}
+
+/* --- PÁRRAFO DEL BANNER --- */
+.banner p {  /* Selecciona el párrafo del banner */
+  font-style: italic;  /* Estilo de fuente en cursiva */
+  font-weight: bold;  /* Negrita para el párrafo */
+  font-size: var(--font-size-large);  /* Tamaño de fuente grande */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);  /* Sombra del texto */
+  margin-bottom: 0;  /* Sin margen inferior */
+  line-height: 1.4;  /* Altura de línea para mejorar la legibilidad */
+  color: #fffef7;  /* Color blanco cálido para compatibilidad */
+}
+
+/* --- RESPONSIVE PARA TABLETS --- */
+@media (max-width: 768px) {  /* Estilos para pantallas de tabletas */
+  .banner {  /* Selecciona el contenedor del banner */
+    padding: var(--spacing-md);  /* Espaciado interno reducido */
+    margin-bottom: var(--spacing-md);  /* Margen inferior reducido */
+  }
+  
+  .banner h1 {  /* Selecciona el título del banner */
+    font-size: 2rem;  /* Tamaño de fuente reducido */
+  }
+  
+  .banner p {  /* Selecciona el párrafo del banner */
+    font-size: var(--font-size-base);  /* Tamaño de fuente base */
+  }
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 480px) {  /* Estilos para pantallas de móviles */
+  .banner {  /* Selecciona el contenedor del banner */
+    padding: var(--spacing-sm);  /* Espaciado interno aún más reducido */
+    border-width: 1px;  /* Borde más delgado */
+  }
+  
+  .banner h1 {  /* Selecciona el título del banner */
+    font-size: 1.75rem;  /* Tamaño de fuente aún más reducido */
+  }
+  
+  .banner p {  /* Selecciona el párrafo del banner */
+    font-size: var(--font-size-small);  /* Tamaño de fuente pequeño */
+  }
+}

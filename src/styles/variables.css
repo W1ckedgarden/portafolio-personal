@@ -1,0 +1,62 @@
+/* ===== VARIABLES GLOBALES ===== */
+
+/* Colores principales */
+:root {
+  /* Colores de marca */
+  --color-primary: #c7436d;  /* Color principal de la marca */
+  --color-primary-light: #ff6b9d;  /* Color claro de la marca */
+  --color-primary-dark: #a0345a;  /* Color oscuro de la marca */
+  
+  /* Colores de fondo */
+  --bg-main: #f7f7fa;  /* Color de fondo principal */
+  --bg-white: #fff;  /* Color de fondo blanco */
+  --bg-light: #f8f9fa;  /* Color de fondo claro */
+  --bg-success: #e0ffe0;  /* Color de fondo para éxito */
+  --bg-error: #ffe0e0;  /* Color de fondo para error */
+  
+  /* Colores de texto */
+  --text-dark: #333;  /* Color de texto oscuro */
+  --text-medium: #666;  /* Color de texto medio */
+  --text-light: #999;  /* Color de texto claro */
+  --text-white: #fff;  /* Color de texto blanco */
+  
+  /* Colores de estado */
+  --color-success: #217a21;  /* Color de éxito */
+  --color-success-border: #b3ffb3;  /* Borde de éxito */
+  --color-error: #b30000;  /* Color de error */
+  --color-error-border: #ffb3b3;  /* Borde de error */
+  --color-error-hover: #d32f2f;  /* Color de error al pasar el cursor */
+  
+  /* Fuentes */
+  --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;  /* Fuente principal */
+  --font-size-base: 1rem;  /* Tamaño de fuente base */
+  --font-size-small: 0.875rem;  /* Tamaño de fuente pequeño */
+  --font-size-large: 1.125rem;  /* Tamaño de fuente grande */
+  --font-size-xl: 1.5rem;  /* Tamaño de fuente extra grande */
+  --font-size-xxl: 2rem;  /* Tamaño de fuente doble
+  
+  /* Espaciados */
+  --spacing-xs: 4px;  /* Espaciado extra pequeño */
+  --spacing-sm: 8px;  /* Espaciado pequeño */
+  --spacing-md: 16px;  /* Espaciado medio */
+  --spacing-lg: 24px;  /* Espaciado grande */
+  --spacing-xl: 32px;  /* Espaciado extra grande */
+  
+  /* Bordes */
+  --border-radius: 8px;  /* Radio de borde */
+  --border-radius-sm: 4px;  /* Radio de borde pequeño */
+  --border-width: 1px;  /* Ancho de borde */
+  
+  /* Sombras */
+  --shadow-sm: 0 2px 4px rgba(80, 80, 80, 0.1);  /* Sombra pequeña */
+  --shadow-md: 0 4px 8px rgba(80, 80, 80, 0.15);  /* Sombra media */
+  
+  /* Transiciones */
+  --transition: 0.3s ease;  /* Transición por defecto */
+  --transition-fast: 0.2s ease;  /* Transición rápida */
+  --transition-instant: 0.1s ease;  /* Transición instantánea */
+
+  /* Colores con transparencia */
+  --color-primary-light-bg: rgba(199, 67, 109, 0.05);  /* ← AGREGAR NUEVA */
+  --border-dashed-color: #e0e0e0;  /* ← AGREGAR NUEVA */
+}

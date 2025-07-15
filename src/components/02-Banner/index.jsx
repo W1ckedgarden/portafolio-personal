@@ -1,3 +1,5 @@
+import './Banner.css'  // Importa el archivo CSS para aplicar estilos al componente Banner
+
 // Componente que muestra el banner de bienvenida del sitio
 function Banner() {
   return (

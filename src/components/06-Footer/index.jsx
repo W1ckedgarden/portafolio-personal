@@ -1,6 +1,7 @@
-import facebookIcon from '../assets/images/facebook.png'  // Importa el icono de Facebook
-import githubIcon from '../assets/images/github.png'  // Importa el icono de GitHub
-import instagramIcon from '../assets/images/instagram.png'  // Importa el icono de Instagram
+import facebookIcon from "../../assets/images/facebook.png";  // Importa el icono de Facebook
+import githubIcon from "../../assets/images/github.png";  // Importa el icono de GitHub
+import instagramIcon from "../../assets/images/instagram.png";  // Importa el icono de Instagram
+import './Footer.css'  // Importa los estilos del pie de página
 
 // Componente Footer que representa el pie de página de la aplicación
 function Footer() {  // Función para crear el pie de página de la aplicación

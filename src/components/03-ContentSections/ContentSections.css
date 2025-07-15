@@ -1,0 +1,164 @@
+/* ===== ESTILOS DE CONTENT SECTIONS ===== */
+
+/* --- CONTENIDO PRINCIPAL --- */
+.contenido {  /* Selecciona el contenedor principal de contenido */
+  background-color: var(--bg-success);  /* Color de fondo verde */
+  padding: var(--spacing-lg);  /* Espaciado interno */
+  border: 2px solid #808080;  /* Borde gris */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  margin-bottom: var(--spacing-lg);  /* Margen inferior */
+}
+
+.contenido article {  /* Selecciona los artículos dentro del contenedor */
+  text-align: center;  /* Alineación del texto al centro */
+  max-width: 1000px;  /* Ancho máximo del artículo */
+  margin: 0 auto var(--spacing-xl) auto;  /* Centra el artículo y añade margen inferior */
+  padding: 0 var(--spacing-sm);  /* Espaciado interno horizontal */
+  background: var(--bg-white);  /* Color de fondo blanco */
+  border-radius: var(--border-radius);  /* Bordes redondeados */
+  box-shadow: var(--shadow-sm);  /* Sombra para dar profundidad */
+  padding: var(--spacing-lg);  /* Espaciado interno */
+}
+
+.contenido article h2 {  /* Selecciona los títulos de los artículos */
+  color: rgba(0, 0, 0, 0.616);  /* Color gris oscuro */
+  font-weight: bold;  /* Negrita para el título */
+  text-decoration: underline;  /* Subrayado del texto */
+  text-shadow: 1px 1px 2px #808080;  /* Sombra del texto */
+  margin-bottom: var(--spacing-md);  /* Margen inferior */
+  font-size: var(--font-size-xl);  /* Tamaño de fuente extra grande */
+}
+
+.contenido article p {  /* Selecciona los párrafos dentro de los artículos */
+  color: var(--text-medium);  /* Color del texto medio */
+  font-weight: bold;  /* Negrita para el párrafo */
+  font-size: var(--font-size-large);  /* Tamaño de fuente grande */
+  line-height: 1.6;  /* Interlineado para mejorar la legibilidad */
+  margin-bottom: var(--spacing-md);  /* Margen inferior */
+}
+
+/* --- IMÁGENES DE SECCIONES --- */
+.img-seccion {  /* Selecciona las imágenes de las secciones */
+  width: 100%;  /* Ancho del 100% para adaptarse al contenedor */
+  max-width: 700px;  /* Ancho máximo de 700px */
+  height: 340px;  /* Altura fija de 340px */
+  object-fit: cover;  /* Ajusta la imagen para cubrir el contenedor */
+  object-position: center;  /* Centra la imagen dentro del contenedor */
+  border-radius: var(--border-radius);  /* Bordes redondeados */
+  display: block;  /* Hace que la imagen sea un bloque */
+  margin: 0 auto var(--spacing-md) auto;  /* Centra la imagen y añade margen inferior */
+  box-shadow: var(--shadow-sm);  /* Sombra para dar profundidad */
+  transition: var(--transition);  /* Transición suave para efectos al pasar el cursor */
+}
+
+.img-seccion:hover {  /* Efecto al pasar el cursor sobre la imagen */
+  transform: scale(1.02);  /* Escala la imagen ligeramente */
+  box-shadow: var(--shadow-md);  /* Aumenta la sombra para dar un efecto de profundidad */
+}
+
+/* --- IMAGEN VERTICAL ESPECÍFICA --- */
+.img-dd {  /* Selecciona la imagen con clase img-dd que es vertical*/
+  width: 320px;  /* Ancho fijo de 320px */
+  height: 260px;  /* Altura fija de 260px */
+  object-fit: contain;  /* Ajusta la imagen para que se contenga dentro del contenedor */
+  object-position: center;  /* Centra la imagen dentro del contenedor */
+  display: block;  /* Hace que la imagen sea un bloque */
+  margin: 0 auto var(--spacing-md) auto;  /* Centra la imagen y añade margen inferior */
+  background: var(--bg-success);  /* Fondo verde para la imagen */
+  border-radius: var(--border-radius);  /* Bordes redondeados */
+  padding: var(--spacing-sm);  /* Espaciado interno */
+  box-shadow: var(--shadow-sm);  /* Sombra para dar profundidad */
+  transition: var(--transition);  /* Transición suave para efectos al pasar el cursor */
+}
+
+.img-dd:hover {  /* Efecto al pasar el cursor sobre la imagen vertical */
+  transform: scale(1.02);  /* Escala la imagen ligeramente */
+  box-shadow: var(--shadow-md);  /* Aumenta la sombra para dar un efecto de profundidad */
+}
+
+/* --- BOTONES FAVORITOS --- */
+.btn-favorito {  /* Selecciona los botones de favoritos */
+  background-color: #e75480;  /* Color de fondo rosa */
+  color: var(--text-white);  /* Color del texto blanco */
+  border: none;  /* Sin borde */
+  border-radius: var(--border-radius-sm);  /* Bordes redondeados */
+  padding: var(--spacing-sm) var(--spacing-md);  /* Espaciado interno */
+  font-size: var(--font-size-base);  /* Tamaño de fuente base */
+  font-weight: bold;  /* Negrita para el texto del botón */
+  cursor: pointer;  /* Cambia el cursor al pasar sobre el botón */
+  margin: var(--spacing-md) auto 0 auto;  /* Margen superior y centrado horizontalmente */
+  display: block;  /* Hace que el botón sea un bloque */
+  width: fit-content;  /* Ancho del botón se ajusta al contenido */
+  transition: var(--transition);  /* Transición suave para efectos al pasar el cursor */
+  box-shadow: var(--shadow-sm);  /* Sombra para dar profundidad */
+  outline: none;  /* Sin contorno al enfocar el botón */
+}
+
+.btn-favorito:hover {  /* Efecto al pasar el cursor sobre el botón */
+  background-color: var(--color-primary);  /* Cambia el color de fondo al color primario */
+  color: #fffbe7;  /* Cambia el color del texto a blanco */
+  box-shadow: var(--shadow-md);  /* Aumenta la sombra para dar un efecto de profundidad */
+  transform: translateY(-2px);  /* Eleva el botón ligeramente al pasar el cursor */
+}
+
+.btn-favorito:focus {  /* Efecto al enfocar el botón */
+  outline: none;  /* Sin contorno al enfocar el botón */
+  box-shadow: 0 0 0 3px rgba(199, 67, 109, 0.2);  /* Añade una sombra alrededor del botón al enfocar */
+}
+
+.btn-favorito:active {  /* Efecto al hacer clic en el botón */
+  transform: translateY(0);  /* Restablece la posición del botón */
+  box-shadow: var(--shadow-sm);  /* Restablece la sombra */
+  transition: all var(--transition-instant);  /* Transición instantánea para el clic */
+}
+
+/* --- RESPONSIVE PARA TABLETS --- */
+@media (max-width: 768px) {  /* Estilos para pantallas de tabletas */
+  .contenido {  /* Ajusta el padding del contenedor */
+    padding: var(--spacing-md);  /* Espaciado interno */
+  }
+  
+  .contenido article {  /* Ajusta el padding de los artículos */
+    padding: var(--spacing-md);  /* Espaciado interno */
+    margin-bottom: var(--spacing-lg);  /* Margen inferior */
+  }
+  
+  .img-seccion {  /* Ajusta el tamaño de las imágenes de sección */
+    height: 250px;  /* Altura fija de 250px */
+    max-width: 500px;  /* Ancho máximo de 500px */
+  }
+  
+  .img-dd {  /* Ajusta el tamaño de la imagen vertical */
+    width: 250px;  /* Ancho fijo de 250px */
+    height: 200px;  /* Altura fija de 200px */
+  }
+}
+
+/* --- RESPONSIVE PARA MÓVILES --- */
+@media (max-width: 480px) {  /* Estilos para pantallas de móviles */
+  .contenido {  /* Ajusta el padding del contenedor */
+    padding: var(--spacing-sm);  /* Espaciado interno */
+  }
+  
+  .contenido article {  /* Ajusta el padding de los artículos */
+    padding: var(--spacing-sm);  /* Espaciado interno */
+  }
+  
+  .contenido article h2 {  /* Ajusta el tamaño del título */
+    font-size: var(--font-size-large);  /* Tamaño de fuente grande */
+  }
+  
+  .img-seccion {  /* Ajusta el tamaño de las imágenes de sección */
+    height: 200px;  /* Altura fija de 200px */
+  }
+  
+  .img-dd {  /* Ajusta el tamaño de la imagen vertical */
+    width: 200px;  /* Ancho fijo de 200px */
+    height: 160px;  /* Altura fija de 160px */
+  }
+  
+  .btn-favorito {  /* Ajusta el tamaño del botón de favoritos */
+    padding: var(--spacing-xs) var(--spacing-sm);  /* Espaciado interno */
+    font-size: var(--font-size-small);  /* Tamaño de fuente pequeño */
+  }
+}
